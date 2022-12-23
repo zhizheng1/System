@@ -1,0 +1,23 @@
+apt install linux-generic-hwe-22.04
+useradd -m -d /home/user user
+passwd user
+usermod -a -G sudo user
+apt install zsh zip unzip avahi-daemon
+sudo apt remove --purge snapd
+sudo rm -rf /usr/local/*
+chsh -s /bin/zsh
+copy /etc/zsh/zshrc
+sudo vi /etc/ssh/sshd_config
+    PermitRootLogin no
+sudo systemctl restart sshd
+sudo chmod -x /etc/update-motd.d/*
+sudo rm /etc/update-motd.d/50-landscape-sysinfo
+
+sudo apt install nfs-kernel-server nfs-common
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@host
+
+timedatectl list-timezones
+sudo timedatectl set-timezone <timezone>
+
+mkdir Applications Documents Library Desktop

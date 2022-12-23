@@ -1,0 +1,6 @@
+mkdir -p ~/.local/share/fonts
+ln -sf /System/Library/Fonts/Supplemental/Arial* ~/.local/share/fonts
+mkdir -p ~/.config/fontconfig
+echo '<fontconfig><dir>~/.local/share/fonts</dir><selectfont><rejectfont><glob>/System/*</glob><glob>/Library/*</glob></rejectfont></selectfont></fontconfig>' >~/.config/fontconfig/fonts.conf
+
+export PANGOCAIRO_BACKEND=fc
