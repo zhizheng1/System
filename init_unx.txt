@@ -13,8 +13,6 @@ sudo systemctl restart sshd
 sudo chmod -x /etc/update-motd.d/*
 sudo rm /etc/update-motd.d/50-landscape-sysinfo
 
-sudo apt install nfs-kernel-server nfs-common
-
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host
 
 timedatectl list-timezones
