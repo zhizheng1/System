@@ -13,6 +13,10 @@ sudo systemctl restart sshd
 sudo chmod -x /etc/update-motd.d/*
 sudo rm /etc/update-motd.d/50-landscape-sysinfo
 
+sudo apt install samba cifs-utils apache2
+sudo systemctl disable smbd
+sudo systemctl disable apache2
+
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@host
 
 timedatectl list-timezones
