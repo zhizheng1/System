@@ -3,3 +3,7 @@ rsync -var --delete --progress src dest
 echo 'tell application "Safari"
 set bounds of front window to {0,0,1280,960}          
 end tell'|osascript
+
+[screen]
+https://ftp.gnu.org/gnu/screen/
+./configure --enable-colors256 --enable-telnet --enable-rxvt_osc CFLAGS=-Wno-error=implicit-function-declaration
