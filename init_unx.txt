@@ -7,6 +7,7 @@ sudo apt remove --purge snapd
 sudo rm -rf /usr/local/*
 chsh -s /bin/zsh
 copy /etc/zsh/zshrc
+cp /usr/share/vim/*/defaults.vim
 sudo vi /etc/ssh/sshd_config
     PermitRootLogin no
 sudo systemctl restart sshd
