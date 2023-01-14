@@ -7,12 +7,7 @@ sudo apt remove --purge snapd
 sudo rm -rf /usr/local/*
 chsh -s /bin/zsh
 copy /etc/zsh/zshrc
-autoload zsh-newuser-install
-zsh-newuser-install -f
-cp /usr/share/vim/*/defaults.vim
-echo 'unlet! skip_defaults_vim\nsource $VIMRUNTIME/defaults.vim' >~/.vimrc 
-echo "set mouse=a\nset ttymouse=xterm2" >>~/.vimrc
-echo export VISUAL=/usr/bin/vim >>~/.zshrc
+
 sudo vi /etc/ssh/sshd_config
     PermitRootLogin no
 sudo systemctl restart sshd
