@@ -5,6 +5,7 @@ https://ftp.gnu.org/gnu/screen/
 ./configure --enable-colors256 --enable-telnet --enable-rxvt_osc CFLAGS="$CFLAGS -Wno-implicit-function-declaration"
 
 curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz && gunzip terminfo.src.gz
+tic -xe xterm-256color terminfo.src
 tic -xe screen.xterm-256color terminfo.src
 echo "alias screen=~/.local/bin/screen" >>~/.zshrc
 
