@@ -1,7 +1,7 @@
 [less]
 http://greenwoodsoftware.com/less/download.html
 
-echo "alias less=~/.local/bin/less" >>~/.zshrc
+echo "alias less=~/.local/bin/less" >>~/.zshenv
 
 [screen]
 https://ftp.gnu.org/gnu/screen/
@@ -12,6 +12,6 @@ https://ftp.gnu.org/gnu/screen/
 curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz && gunzip terminfo.src.gz
 tic -xe xterm-256color terminfo.src
 tic -xe screen.xterm-256color terminfo.src
-echo "alias screen=~/.local/bin/screen" >>~/.zshrc
+echo "alias screen=~/.local/bin/screen" >>~/.zshenv
 
 sudo rm /etc/screenrc
