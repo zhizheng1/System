@@ -12,3 +12,7 @@ tell application "Safari"
     end repeat
   end repeat
 end tell
+
+mkdir -p run.app/Contents/MacOS
+echo '#!/bin/sh' >run.app/Contents/MacOS/run
+chmod +x run.app/Contents/MacOS/run
