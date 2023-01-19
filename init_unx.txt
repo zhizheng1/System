@@ -5,6 +5,7 @@ usermod -a -G sudo user
 apt install zsh zip unzip avahi-daemon
 sudo apt remove --purge snapd
 sudo rm -rf /usr/local/*
+echo 'PATH="/usr/bin:/bin:/usr/sbin:/sbin"' >/etc/environment
 chsh -s /bin/zsh
 copy /etc/zsh/zshrc
 
