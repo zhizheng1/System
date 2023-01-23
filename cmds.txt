@@ -4,15 +4,6 @@ echo 'tell application "Safari"
 set bounds of front window to {0,0,1280,960}          
 end tell'|osascript
 
-tell application "Safari"
-  repeat with w in windows
-    repeat with t in tabs of w
-      set turl to URL of t
-      if turl is "http://url" then set URL of t to turl
-    end repeat
-  end repeat
-end tell
-
 mkdir -p run.app/Contents/MacOS
 echo '#!/bin/sh' >run.app/Contents/MacOS/run
 chmod +x run.app/Contents/MacOS/run
