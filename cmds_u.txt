@@ -15,3 +15,13 @@ tic -xe screen.xterm-256color terminfo.src
 echo "alias screen=~/.local/bin/screen" >>~/.zshenv
 
 sudo rm /etc/screenrc
+
+[vim]
+https://github.com/vim/vim
+
+./configure --with-features=normal --enable-gui=no --with-x=no --enable-cscope --enable-terminal --disable-selinux --disable-nls --with-tlib=ncurses --with-compiledby=root@linux
+
+alias vi="VIMRUNTIME=~/.local/share/vim/vim90 ~/.local/bin/vim"
+alias vim="VIMRUNTIME=~/.local/share/vim/vim90 ~/.local/bin/vim"
+alias vimdiff="VIMRUNTIME=~/.local/share/vim/vim90 ~/.local/bin/vimdiff"
+alias xxd=~/.local/bin/xxd
