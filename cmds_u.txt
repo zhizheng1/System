@@ -20,4 +20,5 @@ https://github.com/vim/vim
 
 ./configure --with-features=normal --enable-gui=no --with-x=no --enable-cscope --enable-terminal --disable-selinux --disable-nls --with-tlib=ncurses --with-compiledby=root@linux
 
+alias vi=~/.local/bin/vim
 export VIM=~/.local/share/vim
