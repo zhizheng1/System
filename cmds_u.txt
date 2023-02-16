@@ -1,7 +1,7 @@
 [less]
 http://greenwoodsoftware.com/less/download.html
 
-echo "alias less=~/.local/bin/less" >>~/.zshenv
+for a in ~/.local/bin/*; do a=${a##*/}; echo "alias $a=~/.local/bin/$a" >>~/.zshenv; done
 
 [screen]
 https://ftp.gnu.org/gnu/screen/
@@ -12,7 +12,6 @@ https://ftp.gnu.org/gnu/screen/
 curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz && gunzip terminfo.src.gz
 tic -xe xterm-256color terminfo.src
 tic -xe screen.xterm-256color terminfo.src
-echo "alias screen=~/.local/bin/screen" >>~/.zshenv
 
 sudo rm /etc/screenrc
 
@@ -21,7 +20,4 @@ https://github.com/vim/vim
 
 ./configure --with-features=normal --enable-gui=no --with-x=no --enable-cscope --enable-terminal --disable-selinux --disable-nls --with-tlib=ncurses --with-compiledby=root@linux
 
-alias vi="VIMRUNTIME=~/.local/share/vim/vim90 ~/.local/bin/vim"
-alias vim="VIMRUNTIME=~/.local/share/vim/vim90 ~/.local/bin/vim"
-alias vimdiff="VIMRUNTIME=~/.local/share/vim/vim90 ~/.local/bin/vimdiff"
-alias xxd=~/.local/bin/xxd
+export VIM=~/.local/share/vim
