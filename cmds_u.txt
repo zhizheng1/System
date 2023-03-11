@@ -1,24 +1,17 @@
-[less]
-http://greenwoodsoftware.com/less/download.html
 
 for a in ~/.local/bin/*; do a=${a##*/}; echo "alias $a=~/.local/bin/$a" >>~/.zshenv; done
+xterm-256color: sitm=\E[3m, ritm=\E[23m,
 
 [screen]
 https://ftp.gnu.org/gnu/screen/
-
 ./autogen.sh [on unx]
 ./configure --enable-colors256 --enable-telnet --enable-rxvt_osc CFLAGS="$CFLAGS -Wno-implicit-function-declaration"
-
-curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz && gunzip terminfo.src.gz
-tic -xe xterm-256color terminfo.src
-tic -xe screen.xterm-256color terminfo.src
-
+screen.xterm-256color|GNU Screen with xterm using 256 colors,
+        use=xterm+256color, use=screen,
 sudo rm /etc/screenrc
 
 [vim]
 https://github.com/vim/vim
-
 ./configure --with-features=normal --enable-gui=no --with-x=no --enable-cscope --enable-terminal --disable-selinux --disable-nls --with-tlib=ncurses --with-compiledby=root@linux
-
 ln -sf vim bin/vi
 export VIM=~/.local/share/vim
